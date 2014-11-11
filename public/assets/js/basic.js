@@ -30,8 +30,8 @@
             this.el.style.width = '';
             this.el.style.height = '';
 
-            var width = this.el.clientWidth,
-                height = Math.round(width / this.ratio),
+            var width = this.el.clientWidth;
+            var height = Math.round(width / this.ratio),
                 padded = Math.round(document.body.clientHeight * 0.9);
 
             // if the height is too big for the window, constrain it

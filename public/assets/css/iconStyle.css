@@ -3,7 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 2014/11/04, 11:52:27
     Author     : yuqi.zhang
 */
@@ -20,6 +20,13 @@ and open the template in the editor.
   height: 150px;
 }
 
+
+.window-fixed{
+  position: absolute;
+  bottom: 320px;
+  left: 500px;
+
+}
 
 .hovicon {
   display: inline-block;
@@ -38,9 +45,9 @@ and open the template in the editor.
 }
 
 .hovicon img{
-  width:70%; 
-  position:relative; 
-  top: 1px; 
+  width:70%;
+  position:relative;
+  top: 15px;
   display: inline-block;
 }
 
@@ -69,7 +76,7 @@ and open the template in the editor.
 .hovicon img{
   top: -22px;
 }
- 
+
 }
 .hovicon.small {
   font-size: 20px;
@@ -376,4 +383,3 @@ and open the template in the editor.
     opacity: 0;
   }
 }
-

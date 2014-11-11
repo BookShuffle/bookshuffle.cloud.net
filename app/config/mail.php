@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => "test@gmail.com",
+	'username' => "clongbupt@gmail.com",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,6 +93,6 @@ return array(
 	|
 	*/
 
-	'password' => "123456",
+	'password' => "gg&clong&012096",
 
 );
