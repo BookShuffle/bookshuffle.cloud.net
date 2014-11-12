@@ -23,9 +23,8 @@ and open the template in the editor.
 
 .window-fixed{
   position: absolute;
-  bottom: 320px;
-  left: 500px;
-
+  bottom: 10px;
+  left: 40%;
 }
 
 .hovicon {
