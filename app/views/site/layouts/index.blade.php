@@ -28,8 +28,8 @@
 					<li>Welcome {{{ Auth::user()->username }}}</li>
 					<li><a href="{{{ URL::to('user/logout') }}}" class="button">Logout</a></li>
 					@else
-					<li><a href="{{{ URL::to('user/create') }}}" class="button">Login</a></li>
-					<li><a href="{{{ URL::to('user/register') }}}" class="button">Register</a></li>
+					<li><a href="{{{ URL::to('user/login') }}}" class="button">Login</a></li>
+					<li><a href="{{{ URL::to('user/create') }}}" class="button">Register</a></li>
 					@endif
 				</ul>
 			</nav>

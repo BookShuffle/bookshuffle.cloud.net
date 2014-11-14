@@ -1425,3 +1425,19 @@
 		#cta .formerize-placeholder {
 			color: rgba(255, 255, 255, 0.75) !important;
 		}
+
+
+		/* LOGIN */
+		#login {
+			background-attachment: scroll,	fixed;
+			background-position: top left,	center center;
+			background-repeat: repeat,	no-repeat;
+			background-size: auto,	cover;
+			color: #fff;
+			padding: 5em 0 10em 0;
+			text-align: center;
+		}
+
+		#login h2{
+			color: #fff;
+		}

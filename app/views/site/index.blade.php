@@ -12,7 +12,7 @@
 			<h2>BookShuffle</h2>
 			<p>Read your favorite books like a Apple Shuffle.</p>
 			<ul class="actions">
-				<li><a href="#" class="button special">Login</a></li>
+				<li><a href="/user/login" class="button special">Login</a></li>
 				<li><a href="#" id="moveSectionDown" class="button">Start Read</a></li>
 			</ul>
 		</div>
