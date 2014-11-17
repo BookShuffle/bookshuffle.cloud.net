@@ -38,7 +38,7 @@
                 <label for="remember">Remember me</label>
               </div>
               <div class="6u 12u(3)">
-                <a href="/">Fogot Password ?</label>
+                <a href="forgot">Fogot Password ?</label>
               </div>
             </div>
 
@@ -52,7 +52,7 @@
 
             <div class="row uniform">
               <div class="12u">
-                <input type="submit" class="button fit special" value="Register">
+                <input type="submit" class="button fit special" value="Login">
               </div>
             </div>
           </form>
@@ -62,5 +62,19 @@
   </section>
 
 </div>
+
+<script charset="utf-8">
+  $(document).ready(function() {
+    $("body").backstretch([
+      "/assets/img/3.jpg",
+      "/assets/img/1.jpg",
+      "/assets/img/2.jpg"
+    ], {
+      duration: 4000,
+      fade: 750
+    });
+  });
+</script>
+
 
 @stop

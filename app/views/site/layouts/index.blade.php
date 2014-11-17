@@ -15,6 +15,8 @@
 
 		<link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
 
+		<script src="/assets/js/jquery.min.js"></script>
+
 	</head>
 
 	<body class="landing">
@@ -26,10 +28,10 @@
 				<ul>
 					@if (Auth::check())
 					<li>Welcome {{{ Auth::user()->username }}}</li>
-					<li><a href="{{{ URL::to('user/logout') }}}" class="button">Logout</a></li>
+					<li><a href="{{{ URL::to('user/logout') }}}">Logout</a></li>
 					@else
-					<li><a href="{{{ URL::to('user/login') }}}" class="button">Login</a></li>
-					<li><a href="{{{ URL::to('user/create') }}}" class="button">Register</a></li>
+					<li><a href="{{{ URL::to('user/login') }}}" {{ (Request::is('user/login') ? ' class="button"' : '') }}>Login</a></li>
+					<li><a href="{{{ URL::to('user/create') }}}" {{ (Request::is('user/create') ? ' class="button"' : '') }}>Register</a></li>
 					@endif
 				</ul>
 			</nav>
@@ -48,7 +50,6 @@
 		</footer>
 
 		<!--[if lte IE 8]><script src="/assets/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="/assets/js/jquery.min.js"></script>
 		<script src="/assets/js/jquery.dropotron.min.js"></script>
 		<script src="/assets/js/jquery.scrollgress.min.js"></script>
 		<script src="/assets/js/skel.min.js"></script>

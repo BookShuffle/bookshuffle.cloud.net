@@ -23,7 +23,7 @@
 							<input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
               <div class="row uniform 50%">
 								<div class="12u">
-									<input type="text" name="name" id="name" value="{{{ Input::old('username') }}}" placeholder="Username">
+									<input type="text" name="username" id="username" value="{{{ Input::old('username') }}}" placeholder="Username">
 								</div>
 								<div class="12u">
 									<input type="email" name="email" id="email" value="{{{ Input::old('email') }}}" placeholder="Email">
@@ -41,25 +41,25 @@
 									<input type="hidden" name="remember" value="1">
 									<input type="checkbox" id="remember" name="remember" checked="checked">
 									<label for="remember"></label>
-									<a href="/assets/terms" target="_blank">Agree Terms</a>
+									<a href="http://creativecommons.org/licenses/by-nc/2.5/" target="_blank">Agree Terms</a>
 								</div>
 							</div>
 
 							@if ( Session::get('error') )
-									<div class="alert alert-error alert-danger">
-											@if ( is_array(Session::get('error')) )
-													{{ head(Session::get('error')) }}
-											@endif
-									</div>
+								<div class="alert alert-error alert-danger">
+									@if ( is_array(Session::get('error')) )
+										{{ head(Session::get('error')) }}
+									@endif
+								</div>
 							@endif
 
 							@if ( Session::get('notice') )
-									<div class="alert">{{ Session::get('notice') }}</div>
+								<div class="alert">{{ Session::get('notice') }}</div>
 							@endif
 
               <div class="row uniform">
                 <div class="12u">
-                  <input type="submit" class="button fit special" value="Login">
+                  <input type="submit" class="button fit special" value="Register">
                 </div>
               </div>
             </form>
@@ -68,5 +68,19 @@
       </div>
     </section>
 	</div>
+
+	<script charset="utf-8">
+		$(document).ready(function() {
+			$("body").backstretch([
+				"/assets/img/1.jpg",
+				"/assets/img/2.jpg",
+				"/assets/img/3.jpg"
+			], {
+				duration: 4000,
+				fade: 750
+			});
+		});
+	</script>
+
 
 @stop

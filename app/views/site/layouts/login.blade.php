@@ -12,6 +12,8 @@
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie/v8.css" /><![endif]-->
 
+    <script src="/assets/js/jquery.min.js"></script>
+
   </head>
 
   <body class="landing">
@@ -23,10 +25,10 @@
         <ul>
           @if (Auth::check())
           <li>Welcome {{{ Auth::user()->username }}}</li>
-          <li><a href="{{{ URL::to('user/logout') }}}" class="button">Logout</a></li>
+          <li><a href="{{{ URL::to('user/logout') }}}">Logout</a></li>
           @else
-          <li><a href="{{{ URL::to('user/login') }}}" class="button">Login</a></li>
-          <li><a href="{{{ URL::to('user/create') }}}" class="button">Register</a></li>
+          <li><a href="{{{ URL::to('user/login') }}}" {{ (Request::is('user/login') ? ' class="button"' : '') }}>Login</a></li>
+          <li><a href="{{{ URL::to('user/create') }}}" {{ (Request::is('user/create') ? ' class="button"' : '') }}>Register</a></li>
           @endif
         </ul>
       </nav>
@@ -45,7 +47,6 @@
     </footer> -->
 
     <!--[if lte IE 8]><script src="/assets/css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.dropotron.min.js"></script>
     <script src="/assets/js/jquery.scrollgress.min.js"></script>
     <script src="/assets/js/skel.min.js"></script>
@@ -53,18 +54,5 @@
     <script src="/assets/js/init.js"></script>
 
     <script src="/assets/js/jquery.backstretch.js"></script>
-    <script charset="utf-8">
-      $(document).ready(function() {
-        $("body").backstretch([
-          "/assets/img/1.jpg",
-          "/assets/img/2.jpg",
-          "/assets/img/3.jpg"
-        ], {
-          duration: 4000,
-          fade: 750
-        });
-      });
-    </script>
-
   </body>
 </html>
