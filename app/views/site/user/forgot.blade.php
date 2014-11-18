@@ -1,4 +1,4 @@
-@extends('site.layouts.index')
+@extends('site.layouts.login')
 
 {{-- Web site Title --}}
 @section('title')
