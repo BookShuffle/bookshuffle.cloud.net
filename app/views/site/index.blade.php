@@ -5,21 +5,8 @@
 
 <div id="fullpage">
 
-	<!-- Banner -->
-	<section id="section0" class="section active">
-
-		<div id="banner">
-			<h2>BookShuffle</h2>
-			<p>Read your favorite books like a Apple Shuffle.</p>
-			<ul class="actions">
-				<li><a href="/user/login" class="button special">Login</a></li>
-				<li><a href="#" id="moveSectionDown" class="button">Start Read</a></li>
-			</ul>
-		</div>
-	</section>
-
 	<!-- Main -->
-	<section id="section1" class="section">
+	<section id="section0" class="section">
 		<section id="cta">
 				<header class="major" style="padding-bottom:0px; margin-bottom:0px;">
 					<h3 style="padding-bottom:0px; margin-bottom:0px;">{{{ $book->BookTitle }}}</h3>
@@ -36,10 +23,10 @@
 		<a title="Buy" target="_blank" href="{{{ $book->ItemUrl }}}" class="hovicon effect" >
 			<img src="/assets/img/buy.png" alt="" />
 		</a>
-		<a title="Like" href="/{{{ $book->BookId }}}/{{{ $next }}}/1#main" class="hovicon effect" >
+		<a title="Like" href="/read/{{{ $book->BookId }}}/{{{ $next }}}/1#main" class="hovicon effect" >
 			<img src="/assets/img/like.png" alt="" />
 		</a>
-		<a title="Next" href="/{{{ $book->BookId }}}{{{ $next }}}/0#main" class="hovicon effect" >
+		<a title="Next" href="/read/{{{ $book->BookId }}}{{{ $next }}}/0#main" class="hovicon effect" >
 			<img src="/assets/img/next.png" alt="" />
 		</a>
 	</div>

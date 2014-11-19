@@ -55,8 +55,12 @@ Route::get('search', function() {
 
 });
 
+Route::get('/', function(){
+  return Response::view('start');
+});
 
-Route::get('/{bookId?}/{next?}/{like?}', function($bookId = 1, $next = 0, $like = 1)
+
+Route::get('read/{bookId?}/{next?}/{like?}', function($bookId = 1, $next = 0, $like = 1)
 {
 
 
