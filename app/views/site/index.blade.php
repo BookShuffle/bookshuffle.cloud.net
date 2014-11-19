@@ -13,24 +13,61 @@
 				</header>
 					@for($i = 1; $i < $book->PreviewCount; $i ++)
 					<div class="slide" style="padding-top:0px; margin-top:0px;">
-	          <img style="height:88%;" src="/previews/{{{ $book->ISBN }}}_{{{ $i }}}.jpg" alt="" />
+	          <img src="/previews/{{{ $book->ISBN }}}_{{{ $i }}}.jpg" alt=""/>
 					</div>
 	        @endfor
 		</section>
 	</section>
 
-	<div id="callto" class="animated bounceInLeft align-center window-fixed" >
-		<a title="Buy" target="_blank" href="{{{ $book->ItemUrl }}}" class="hovicon effect" >
-			<img src="/assets/img/buy.png" alt="" />
-		</a>
-		<a title="Like" href="/read/{{{ $book->BookId }}}/{{{ $next }}}/1#main" class="hovicon effect" >
-			<img src="/assets/img/like.png" alt="" />
-		</a>
-		<a title="Next" href="/read/{{{ $book->BookId }}}{{{ $next }}}/0#main" class="hovicon effect" >
-			<img src="/assets/img/next.png" alt="" />
-		</a>
+
+	<div id="pin">
+		<div id="callto">
+			<a title="Buy" target="_blank" href="{{{ $book->ItemUrl }}}" class="hovicon effect" >
+				<img src="/assets/img/buy.png" alt="" />
+			</a>
+			<a title="Like" href="/read/{{{ $book->BookId }}}/{{{ $next }}}" class="hovicon effect" >
+				<img src="/assets/img/like.png" alt="" />
+			</a>
+			<a title="Next" href="/read/{{{ $book->BookId }}}{{{ $next }}}" class="hovicon effect" >
+				<img src="/assets/img/next.png" alt="" />
+			</a>
+		</div>
 	</div>
 
 </div>
+
+<!-- Here is the codes to implement how to let buttons toggle up and down. Including css and javascript.
+
+In order to see and debug it easily, I did not move to other css or js files
+
+ -->
+<style media="screen">
+
+	#pin {
+		position:absolute;
+		bottom: 0;
+		height:15%;
+		width: 100%;
+		z-index: 2;
+	}
+
+	#callto {
+		position: absolute;
+		display:none;
+		margin-left: -230px;
+    left:50%;
+		bottom: 10%;
+	}
+</style>
+
+<script charset="utf-8">
+
+	$(document).ready(function(){
+		$('#pin').hover(function(){
+    	$("#callto").slideToggle("slow");
+  	});
+	})
+
+</script>
 
 @stop

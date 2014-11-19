@@ -21,12 +21,6 @@ and open the template in the editor.
 }
 
 
-.window-fixed{
-  position: absolute;
-  bottom: 10px;
-  left: 40%;
-}
-
 .hovicon {
   display: inline-block;
   font-size: 45px;
