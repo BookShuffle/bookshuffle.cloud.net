@@ -9,7 +9,7 @@
 {{-- Content --}}
 @section('content')
 
-<div class="landview">
+<div class="landview" style="height:1280px;">
 
   <div id="login">
     <h2>Login</h2>
@@ -62,19 +62,5 @@
   </section>
 
 </div>
-
-<script charset="utf-8">
-  $(document).ready(function() {
-    $("body").backstretch([
-      "/assets/img/3.jpg",
-      "/assets/img/1.jpg",
-      "/assets/img/2.jpg"
-    ], {
-      duration: 4000,
-      fade: 750
-    });
-  });
-</script>
-
 
 @stop

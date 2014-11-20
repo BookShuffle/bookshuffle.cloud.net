@@ -38,9 +38,9 @@
 
 							<div class="row uniform 50%">
 								<div class="6u 12u(3)">
-									<input type="hidden" name="remember" value="1">
-									<input type="checkbox" id="remember" name="remember" checked="checked">
-									<label for="remember"></label>
+									<input type="hidden" name="agree" value="1">
+									<input type="checkbox" id="agree" name="agree" checked="checked">
+									<label for="agree"></label>
 									<a href="http://creativecommons.org/licenses/by-nc/2.5/" target="_blank">Agree Terms</a>
 								</div>
 							</div>
@@ -68,19 +68,5 @@
       </div>
     </section>
 	</div>
-
-	<script charset="utf-8">
-		$(document).ready(function() {
-			$("body").backstretch([
-				"/assets/img/1.jpg",
-				"/assets/img/2.jpg",
-				"/assets/img/3.jpg"
-			], {
-				duration: 4000,
-				fade: 750
-			});
-		});
-	</script>
-
 
 @stop
