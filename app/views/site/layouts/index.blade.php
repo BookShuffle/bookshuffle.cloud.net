@@ -15,6 +15,8 @@
 
 		<link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
 
+		<link rel="stylesheet" href="/assets/css/side-comments.css" media="screen" title="no title" charset="utf-8">
+
 		<script src="/assets/js/jquery.min.js"></script>
 
 	</head>
@@ -57,19 +59,20 @@
 		<script src="/assets/js/init.js"></script>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-			<script type="text/javascript" src="/assets/js/jquery.fullPage.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('#fullpage').fullpage({
-						// slidesNavigation: true
-					});
-
-					$('#moveSectionDown').click(function(e){
-						e.preventDefault();
-						$.fn.fullpage.moveSectionDown();
-					});
+		<script src="/assets/js/jquery.fullPage.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
 				});
-			</script>
+
+				$('#moveSectionDown').click(function(e){
+					e.preventDefault();
+					$.fn.fullpage.moveSectionDown();
+				});
+			});
+		</script>
+
+		<script src="/assets/js/waterpipe.js"></script>
 
 	</body>
 </html>
