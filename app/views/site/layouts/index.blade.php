@@ -17,7 +17,11 @@
 
 		<link rel="stylesheet" href="/assets/css/side-comments.css" media="screen" title="no title" charset="utf-8">
 
+		<link rel="stylesheet" type="text/css" href="/assets/css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/component.css" />
+
 		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/modernizr.custom.js"></script>
 
 	</head>
 
@@ -59,20 +63,11 @@
 		<script src="/assets/js/init.js"></script>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-		<script src="/assets/js/jquery.fullPage.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('#fullpage').fullpage({
-				});
-
-				$('#moveSectionDown').click(function(e){
-					e.preventDefault();
-					$.fn.fullpage.moveSectionDown();
-				});
-			});
-		</script>
-
 		<script src="/assets/js/waterpipe.js"></script>
+
+		<script src="/assets/js/bookblock.min.js"></script>
+		<script src="/assets/js/classie.js"></script>
+		<script src="/assets/js/bookshuffle.js"></script>
 
 	</body>
 </html>

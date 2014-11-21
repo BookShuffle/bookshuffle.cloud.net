@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'db_bookshuffle',
 			'username'  => 'root',
-			'password'  => '123456',
+			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
