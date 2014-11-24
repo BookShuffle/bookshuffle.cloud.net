@@ -113,6 +113,7 @@ return array(
         'Zizaco\Confide\ConfideServiceProvider', // Confide Provider
         'Bllim\Datatables\DatatablesServiceProvider', // Datatables
     		'Scalia\SphinxSearch\SphinxSearchServiceProvider',
+				'Artdarek\OAuth\OAuthServiceProvider'
 
         /* Uncomment for use in development */
 //        'Way\Generators\GeneratorsServiceProvider', // Generators
@@ -191,6 +192,7 @@ return array(
         'Carbon'          => 'Carbon\Carbon', // Carbon
         'Datatables'      => 'Bllim\Datatables\Datatables', // DataTables
 				'SphinxSearch' 		=> 'Scalia\SphinxSearch\SphinxSearchFacade',
+				'OAuth' 					=> 'Artdarek\OAuth\Facade\OAuth',
 
     ),
 
