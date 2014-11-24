@@ -38,7 +38,7 @@
 			<li><a href="/read/{{{ $book->BookId }}}/{{{ $next }}}" class="bt-icon icon-star"></a></li>
 			<li><a href="/read/{{{ $book->BookId }}}/{{{ $next }}}" class="bt-icon icon-refresh"></a></li>
 			@if (Auth::check())
-			<li><a href="/user/home" class="bt-icon icon-home"></a></li>
+			<li><a href="/user/index" class="bt-icon icon-home"></a></li>
 			@else
 			<li><a href="/" class="bt-icon icon-home"></a></li>
 			@endif

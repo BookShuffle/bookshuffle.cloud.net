@@ -25,11 +25,10 @@ class UserController extends BaseController {
      */
     public function getIndex()
     {
-        list($user,$redirect) = $this->user->checkAuthAndRedirect('user');
-        if($redirect){return $redirect;}
+        $books = DB::select('select * from tb_book, rltb_user_book where rltb_user_book.UserId = ? and tb_book.BookId = rltb_user_book.BookId', array(Auth::user()->id));
 
         // Show the page
-        return View::make('site/user/index', compact('user'));
+        return View::make('site/user/index', array("books" => $books));
     }
 
     /**
@@ -197,6 +196,91 @@ class UserController extends BaseController {
                 ->with( 'error', $err_msg );
         }
     }
+
+
+    /**
+      * Login with Facebook
+      *
+      */
+    public function getLoginwithfb(){
+        Session::flush();
+        // get data from input
+        $code = Input::get( 'code' );
+
+        // get fb service
+        $fb = OAuth::consumer('Facebook');
+
+        // check if code is valid
+
+        // if code is provided get user data and sign in
+        if ( !empty( $code ) ) {
+
+            // This was a callback request from facebook, get the token
+            $token = $fb->requestAccessToken( $code );
+
+            // Send a request with it
+            $result = json_decode( $fb->request( '/me' ), true );
+
+
+            // dd($result);
+
+            $this->user->username = $result[ 'name' ];
+            $this->user->email = $result[ 'email' ];
+
+            $password = $result[ 'id' ];
+            $passwordConfirmation = $result[ 'id' ];
+
+            if(!empty($password)) {
+                if($password === $passwordConfirmation) {
+                    $this->user->password = $password;
+                    // The password confirmation will be removed from model
+                    // before saving. This field will be used in Ardent's
+                    // auto validation.
+                    $this->user->password_confirmation = $passwordConfirmation;
+                } else {
+                    // Redirect to the new user page
+                    return Redirect::to('user/create')
+                    ->withInput(Input::except('password','password_confirmation'))
+                    ->with('error', Lang::get('admin/users/messages.password_does_not_match'));
+                }
+            } else {
+                unset($this->user->password);
+                unset($this->user->password_confirmation);
+            }
+
+            // Save if valid. Password field will be hashed before save
+            $this->user->save();
+
+            dd($this->user);
+
+            if ( $this->user->id )
+            {
+                // Redirect with success message, You may replace "Lang::get(..." for your custom message.
+                return Redirect::to('user/login')
+                ->with( 'success', Lang::get('user/user.user_account_created') );
+            }
+            else
+            {
+                // Get validation errors (see Ardent package)
+                $error = $this->user->errors()->all();
+
+                return Redirect::to('user/login')
+                    ->withInput(Input::except('password'))
+                    ->with( 'error', $error );
+            }
+
+            return Redirect::to('/');
+        }
+        // if not ask for permission first
+        else {
+            // get fb authorization
+            $url = $fb->getAuthorizationUri();
+
+            // return to facebook login url
+            return Redirect::to( (string)$url );
+        }
+
+     }
 
     /**
      * Attempt to confirm account with code

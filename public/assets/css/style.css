@@ -13,7 +13,7 @@
     color: #fff;
     font-size: 16px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-image: url(/assets/img/4.jpg);
+    /*background-image: url(/assets/img/4.jpg);*/
     background-size: cover;
     background-position: 50% 0;
     height: 100%;
@@ -967,6 +967,46 @@
 			color: #ffffff !important;
 		}
 
+		input[type="submit"].facebook, a.facebook {
+			margin-top: 0px;
+			background-color: #2d4373;
+
+		}
+
+		input[type="submit"].facebook:hover, a.facebook:hover {
+		 	background-color: #3b5998;
+		}
+
+		input[type="submit"].twitter {
+			margin-top: 0px;
+			background-color: #2795e9;
+
+		}
+
+		input[type="submit"].twitter:hover {
+			background-color: #55acee;
+		}
+
+		input[type="submit"].github {
+			margin-top: 0px;
+			background-color: #2b2b2b;
+
+		}
+
+		input[type="submit"].github:hover {
+			background-color: #444444;
+		}
+
+		input[type="submit"].rakuten {
+			margin-top: 0px;
+			background-color: #af191f;
+
+		}
+
+		input[type="submit"].rakuten:hover {
+			background-color: #bf0000;
+		}
+
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
@@ -1247,9 +1287,10 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("/assets/css/images/overlay.png"), url("/assets/img/banner.jpg");
+		/*background-image: url("/assets/css/images/overlay.png"), url("/assets/img/banner.jpg");*/
+		background-image: url("/assets/css/images/overlay.png"), url("/assets/img/bgheader.jpg");
 		background-position: top left,						center center;
-		background-repeat: repeat,							no-repeat;
+		background-repeat: n,							no-repeat;
 		background-size: auto,							cover;
 		color: #fff;
 		padding: 12em 0 20em 0;

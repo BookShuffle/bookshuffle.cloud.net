@@ -13,8 +13,6 @@
 		<link rel="stylesheet" href="/assets/css/iconStyle.css" media="screen" title="no title" charset="utf-8">
 		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie/v8.css" /><![endif]-->
 
-		<link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
-
 		<link rel="stylesheet" href="/assets/css/side-comments.css" media="screen" title="no title" charset="utf-8">
 
 		<link rel="stylesheet" type="text/css" href="/assets/css/bookblock.css" />
@@ -62,12 +60,9 @@
 		<script src="/assets/js/skel-layers.min.js"></script>
 		<script src="/assets/js/init.js"></script>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-		<script src="/assets/js/waterpipe.js"></script>
-
 		<script src="/assets/js/bookblock.min.js"></script>
-		<script src="/assets/js/classie.js"></script>
-		<script src="/assets/js/bookshuffle.js"></script>
+    <script src="/assets/js/classie.js"></script>
+    <script src="/assets/js/bookshelf.js"></script>
 
 	</body>
 </html>

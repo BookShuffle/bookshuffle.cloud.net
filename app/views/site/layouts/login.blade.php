@@ -16,7 +16,7 @@
 
   </head>
 
-  <body class="landing">
+  <body class="landing" style="background-image: url(/assets/img/4.jpg);">
 
     <!-- Header -->
     <header id="header" class="alt">

@@ -38,7 +38,7 @@
                 <label for="remember">Remember me</label>
               </div>
               <div class="6u 12u(3)">
-                <a href="forgot">Fogot Password ?</label>
+                <a href="forgot">Fogot Password ?</a>
               </div>
             </div>
 
@@ -51,8 +51,32 @@
 						@endif
 
             <div class="row uniform">
-              <div class="12u">
+              <div class="12u" style="padding-top: 1em;">
                 <input type="submit" class="button fit special" value="Login">
+              </div>
+            </div>
+
+            <div class="row uniform">
+              <div class="12u" style="padding-top: 1em;">
+                <input type="submit" class="button fit rakuten" value="Rakuten Login">
+              </div>
+            </div>
+
+            <div class="row uniform">
+              <div class="12u" style="padding-top: 1em;">
+                <a href="/user/loginwithfb" class="button fit facebook">Facebook Login</a>
+              </div>
+            </div>
+
+            <div class="row uniform">
+              <div class="12u" style="padding-top: 1em;">
+                <input type="submit" class="button fit twitter" value="Twitter Login">
+              </div>
+            </div>
+
+            <div class="row uniform">
+              <div class="12u" style="padding-top: 1em;">
+                <input type="submit" class="button fit github" value="Github Login">
               </div>
             </div>
           </form>
