@@ -4,7 +4,7 @@
 @section('content')
 
 	<!-- Main -->
-	<div class="bb-custom-wrapper" id="book">
+	<div class="bb-custom-wrapper" id="book" pageId="1">
 		<div class="bb-bookblock">
 			@for($i = 1; $i < $book->PreviewCount; $i += 2)
 				<div class="bb-item">
@@ -19,6 +19,18 @@
 		</nav>
 	</div><!-- /bb-custom-wrapper -->
 
+	<div id="st-container" class="st-container">
+		<!-- contains side comment -->
+		<div class="st-menu st-effect-1" id="side-comment">
+			<div id="commentable-container" class="container commentable-container">
+				@for($i = 1; $i < $book->PreviewCount; $i += 2)
+					<div id="cs-{{{ ($i - 1) / 2 }}}" class="commentable-section side-comments-open" data-section-id="{{{ ($i - 1) / 2 }}}">
+					</div>
+				@endfor
+			</div>
+		</div>
+	</div>
+
 	<nav id="bt-menu" class="bt-menu">
 		<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 		<ul>
@@ -30,7 +42,7 @@
 			@else
 			<li><a href="/" class="bt-icon icon-home"></a></li>
 			@endif
-			<li><a href="#" class="bt-icon icon-user-outline"></a></li>
+			<li><a href="#" class="bt-icon icon-user-outline" id="comment-sidebar" data-effect="st-effect-1"></a></li>
 			<li><a href="#" class="bt-icon icon-facebook"></a></li>
 		</ul>
 	</nav>
@@ -56,7 +68,7 @@ In order to see and debug it easily, I did not move to other css or js files
  -->
 <style media="screen">
 
-	#pin {
+	/*#pin {
 		position:fixed;
 		bottom: 0;
 		height:15%;
@@ -78,20 +90,20 @@ In order to see and debug it easily, I did not move to other css or js files
 		height: 100%;
 		width: 500px;
 		z-index: 3;
-	}
+	}*/
 </style>
 
 <script charset="utf-8">
-
-	$(document).ready(function(){
-		$('#pin').hover(function(){
-			$("#callto").stop(true, false).slideDown("slow");
-		}, function(){
-			$("#callto").stop(true, false).slideUp("slow");
-		});
-
-	});
-
+//
+// 	$(document).ready(function(){
+// 		$('#pin').hover(function(){
+// 			$("#callto").stop(true, false).slideDown("slow");
+// 		}, function(){
+// 			$("#callto").stop(true, false).slideUp("slow");
+// 		});
+//
+// 	});
+//
 </script>
 
 @stop

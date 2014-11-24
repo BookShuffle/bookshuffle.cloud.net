@@ -40,6 +40,8 @@
 		// boobkblock controls
 		this.ctrlBBNext = this.bbWrapper.querySelector( ' .bb-nav-next' );
 		this.ctrlBBPrev = this.bbWrapper.querySelector( ' .bb-nav-prev' );
+
+		this.bbWrapper.setAttribute("pageId", this.bb.currentIdx);
 	}
 
 	Book.prototype._initEvents = function() {
@@ -71,10 +73,12 @@
 	}
 
 	Book.prototype._nextPage = function() {
+		this.bbWrapper.setAttribute("pageId", this.bb.currentIdx + 1);
 		this.bb.next();
 	}
 
 	Book.prototype._prevPage = function() {
+		this.bbWrapper.setAttribute("pageId", this.bb.currentIdx - 1);
 		this.bb.prev();
 	}
 

@@ -58,17 +58,16 @@
   border-color: #4FAF62 transparent;
 }
 .side-comment .comments-wrapper {
-  top: -22px;
-  width: 200px;
+  top: -30px;
+  left: 48px;
+  width: 250px;
   padding-bottom: 120px;
 }
 .side-comment.active .comments-wrapper {
   -webkit-animation: fadein 0.2s;
   animation: fadein 0.2s;
 }
-.side-comment.has-comments .comments-wrapper {
-  top: -22px;
-}
+
 .side-comment ul.comments li,
 .side-comment .comment-form {
   border: 1px solid #F2F2F0;
@@ -197,4 +196,12 @@
   .side-comment .marker {
     display: block;
   }
+}
+
+.show-side-comment {
+  display:block;
+}
+
+.hide-side-comment {
+  display:none;
 }

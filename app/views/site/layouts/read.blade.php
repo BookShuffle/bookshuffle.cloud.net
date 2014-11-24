@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/bordermenu.css" />
 
+    <link rel="stylesheet" type="text/css" href="/assets/css/components-right.css" />
+
     <link rel="stylesheet" href="/assets/css/side-comments.css" />
     <link rel="stylesheet" href="/assets/css/default-theme.css" />
 
@@ -26,22 +28,6 @@
   </head>
 
   <body>
-
-    <!-- Header -->
-    <header id="header">
-      <h1><a href="/"><img src="/assets/img/logo.gif" alt="BookShuffle" style="width:40px;"/>BookShuffle</a></h1>
-      <nav id="nav">
-        <ul>
-          @if (Auth::check())
-          <li>Welcome {{{ Auth::user()->username }}}</li>
-          <li><a href="{{{ URL::to('user/logout') }}}">Logout</a></li>
-          @else
-          <li><a href="{{{ URL::to('user/login') }}}" {{ (Request::is('user/login') ? ' class="button"' : '') }}>Login</a></li>
-          <li><a href="{{{ URL::to('user/create') }}}" {{ (Request::is('user/create') ? ' class="button"' : '') }}>Register</a></li>
-          @endif
-        </ul>
-      </nav>
-    </header>
 
     <!-- Content -->
     @yield('content')
@@ -55,20 +41,22 @@
     <script src="/assets/js/bookshuffle.js"></script>
     <script src="/assets/js/borderMenu.js"></script>
 
+		<script src="/assets/js/sidebarEffects.js"></script>
+
     <script src="/assets/js/side-comments.js"></script>
     <script src="/assets/js/test_data.js"></script>
     <script>
-    // $(document).ready(function(){
-    //   var SideComments = require('side-comments');
-    //   window.sideComments = new SideComments('#commentable-container', currentUser, existingComments);
-    //   window.sideComments.on('commentPosted', function( comment ) {
-    //     comment.id = parseInt(Math.random() * (100000 - 1) + 1);
-    //     sideComments.insertComment(comment);
-    //   });
-    //   window.sideComments.on('commentDeleted', function( comment ) {
-    //     sideComments.removeComment(comment.sectionId, comment.id);
-    //   });
-    // });
+    $(document).ready(function(){
+      var SideComments = require('side-comments');
+      window.sideComments = new SideComments('#commentable-container', currentUser, existingComments);
+      window.sideComments.on('commentPosted', function( comment ) {
+        comment.id = parseInt(Math.random() * (100000 - 1) + 1);
+        sideComments.insertComment(comment);
+      });
+      window.sideComments.on('commentDeleted', function( comment ) {
+        sideComments.removeComment(comment.sectionId, comment.id);
+      });
+    });
   </script>
 
   </body>
